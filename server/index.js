@@ -17,7 +17,6 @@ import orderRouter from "./routes/order.route.js";
 
 const app = express();
 
-<<<<<<< HEAD
 const allowedOrigins = ["http://localhost:5173", "https://blinkeet.vercel.app"];
 
 app.use(
@@ -32,11 +31,6 @@ app.use(
     credentials: true,
   })
 );
-=======
-const allowedOrigins = [
-  "http://localhost:5173",
-  "https://blinkeet.vercel.app",
-];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -48,7 +42,6 @@ app.use(cors({
   },
   credentials: true,
 }));
->>>>>>> c12db11151290808c680f98ebbf08a549bde2c83
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan());
