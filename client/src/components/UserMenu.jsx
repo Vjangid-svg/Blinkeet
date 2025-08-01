@@ -120,7 +120,7 @@ const UserMenu = ({ close }) => {
 
         <button
           onClick={handleLogout}
-          className=" transition-all duration-200 text-left px-2 hover:bg-orange-200 py-1"
+          className=" transition-all duration-200 cursor-pointer text-left px-2 hover:bg-orange-200 py-1"
         >
           Log Out
         </button>

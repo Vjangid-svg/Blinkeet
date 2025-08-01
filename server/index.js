@@ -17,10 +17,18 @@ import orderRouter from "./routes/order.route.js";
 
 const app = express();
 
+const allowedOrigins = ["http://localhost:5173", "https://blinkeet.vercel.app"];
+
 app.use(
   cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
-    origin: process.env.FRONTEND_URL,
   })
 );
 app.use(express.json());

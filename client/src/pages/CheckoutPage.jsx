@@ -148,7 +148,7 @@ const CheckoutPage = () => {
                         </button> */}
 
                         <button
-                            className="py-2 px-4 border-2 border-green-600 font-semibold text-green-600 hover:bg-green-600 hover:text-white"
+                            className="py-2 px-4 border-2 cursor-pointer border-green-600 font-semibold text-green-600 hover:bg-green-600 hover:text-white"
                             onClick={handleCashOnDelivery}
                         >
                             Cash on Delivery

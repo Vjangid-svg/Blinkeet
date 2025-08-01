@@ -70,7 +70,7 @@ const EditCategory = ({close, fetchData,data : CategoryData}) => {
     <div className='bg-white max-w-4xl w-full p-4 rounded'>
         <div className='flex items-center justify-between'>
             <h1 className='font-semibold'>Update Category</h1>
-            <button onClick={close} className='w-fit block ml-auto'>
+                  <button onClick={close} className=' cursor-pointer w-fit block ml-auto'>
                 <IoClose size={25}/>
             </button>
         </div>
@@ -123,8 +123,8 @@ const EditCategory = ({close, fetchData,data : CategoryData}) => {
 
             <button
                 className={`
-                ${data.name && data.image ? "bg-primary-200 hover:bg-primary-100" : "bg-gray-300 "}
-                py-2    
+                ${data.name && data.image ? "bg-primary-200 cursor-pointer hover:bg-primary-100" : "bg-gray-300 "}
+                py-2    cursor-pointer
                 font-semibold 
                 `}
             >Update Category</button>

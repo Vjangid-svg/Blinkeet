@@ -127,7 +127,7 @@ const Profile = () => {
           />
         </div>
 
-        <button className="border px-4 py-2 font-semibold hover:bg-primary-100 border-primary-100 text-primary-200 hover:text-neutral-800 rounded">
+        <button className="border px-4 cursor-pointer py-2 font-semibold hover:bg-primary-100 border-primary-100 text-primary-200 hover:text-neutral-800 rounded">
           {loading ? "Loading..." : "Submit"}
         </button>
       </form>

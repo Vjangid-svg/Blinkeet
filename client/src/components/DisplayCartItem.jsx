@@ -35,7 +35,7 @@ const DisplayCartItem = ({ close }) => {
           <Link to={"/"} className='lg:hidden'>
             <IoClose size={25} />
           </Link>
-          <button onClick={close} className='hidden lg:block'>
+          <button onClick={close} className='hidden cursor-pointer lg:block'>
             <IoClose size={25} />
           </button>
         </div>
@@ -114,7 +114,7 @@ const DisplayCartItem = ({ close }) => {
                 <div>
                   {DisplayPriceInRupees(totalPrice)}
                 </div>
-                <button onClick={redirectToCheckoutPage} className='flex items-center gap-1'>
+                <button onClick={redirectToCheckoutPage} className='flex cursor-pointer items-center gap-1'>
                   Proceed
                   <span><FaCaretRight /></span>
                 </button>

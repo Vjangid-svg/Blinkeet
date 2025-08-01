@@ -89,7 +89,7 @@ const AddToCartButton = ({data} ) => {
         <div className="flex w-full h-full">
           <button
             onClick={decreaseQty}
-            className="bg-green-600 hover:bg-green-700 text-white flex-1 w-full p-1 rounded flex items-center justify-center"
+            className="bg-green-600 hover:bg-green-700 cursor-pointer text-white flex-1 w-full p-1 rounded flex items-center justify-center"
           >
             <FaMinus />
           </button>
@@ -100,7 +100,7 @@ const AddToCartButton = ({data} ) => {
 
           <button
             onClick={increaseQty}
-            className="bg-green-600 hover:bg-green-700 text-white flex-1 w-full p-1 rounded flex items-center justify-center"
+            className="bg-green-600 hover:bg-green-700 cursor-pointer text-white flex-1 w-full p-1 rounded flex items-center justify-center"
           >
             <FaPlus />
           </button>
@@ -108,7 +108,7 @@ const AddToCartButton = ({data} ) => {
      ) : ( 
         <button
           onClick={handleADDTocart}
-          className="bg-green-600 hover:bg-green-700 text-white px-2 lg:px-4 py-1 rounded"
+            className="bg-green-600 hover:bg-green-700 cursor-pointer text-white px-2 lg:px-4 py-1 rounded"
         >
           {loading ? "Adding...." : "Add"}
         </button>

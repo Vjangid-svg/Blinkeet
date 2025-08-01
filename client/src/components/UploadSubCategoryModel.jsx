@@ -102,7 +102,7 @@ const handleUploadSubCategoryImage = async (e) => {
       <div className="bg-white max-w-4xl w-full p-4 rounded">
         <div className="flex items-center justify-between">
           <h1 className="font-semibold">Category</h1>
-          <button onClick={close} className="w-fit block ml-auto">
+          <button onClick={close} className="w-fit cursor-pointer block ml-auto">
             <IoClose size={25} />
           </button>
         </div>
@@ -207,7 +207,7 @@ const handleUploadSubCategoryImage = async (e) => {
                                 ? "bg-primary-200 hover:bg-primary-100"
                                 : "bg-gray-200"
                             }    
-                            font-semibold
+                            font-semibold cursor-pointer
                         `}
           >
             Submit

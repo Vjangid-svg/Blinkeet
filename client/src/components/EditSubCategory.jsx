@@ -91,7 +91,7 @@ const EditSubCategory = ({ close, data, fetchData }) => {
       <div className="w-full max-w-5xl bg-white p-4 rounded">
         <div className="flex items-center justify-between gap-3">
           <h1 className="font-semibold">Edit Sub Category</h1>
-          <button onClick={close}>
+          <button className="cursor-pointer" onClick={close}>
             <IoClose size={25} />
           </button>
         </div>
@@ -197,7 +197,7 @@ const EditSubCategory = ({ close, data, fetchData }) => {
                                 ? "bg-primary-200 hover:bg-primary-100"
                                 : "bg-gray-200"
                             }    
-                            font-semibold
+                            font-semibold cursor-pointer
                         `}
           >
             Submit

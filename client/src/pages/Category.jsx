@@ -76,7 +76,7 @@ const CategoryPage = () => {
         <h2 className="font-semibold">Category</h2>
         <button
           onClick={() => setOpenUploadCategory(true)}
-          className="text-sm border border-primary-200 hover:bg-primary-200 px-3 py-1 rounded"
+          className="text-sm border cursor-pointer border-primary-200 hover:bg-primary-200 px-3 py-1 rounded"
         >
           Add Category
         </button>
@@ -98,7 +98,7 @@ const CategoryPage = () => {
                     setOpenEdit(true);
                     setEditData(category);
                   }}
-                  className="flex-1 bg-green-100 hover:bg-green-200 text-green-600 font-medium py-1 rounded"
+                  className="flex-1 bg-green-100 hover:bg-green-200 text-green-600 cursor-pointer font-medium py-1 rounded"
                 >
                   Edit
                 </button>
@@ -107,7 +107,7 @@ const CategoryPage = () => {
                     setOpenConfirmBoxDelete(true);
                     setDeleteCategory(category);
                   }}
-                  className="flex-1 bg-red-100 hover:bg-red-200 text-red-600 font-medium py-1 rounded"
+                  className="flex-1 bg-red-100 hover:bg-red-200 cursor-pointer text-red-600 font-medium py-1 rounded"
                 >
                   Delete
                 </button>

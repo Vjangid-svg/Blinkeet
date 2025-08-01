@@ -108,16 +108,16 @@ const ProductAdmin = () => {
         <div className="flex justify-between my-4">
           <button
             onClick={handlePrevious}
-            className="border border-primary-200 px-4 py-1 hover:bg-primary-200"
+            className="border border-primary-200 px-4 py-1 cursor-pointer hover:bg-primary-200"
           >
             Previous
           </button>
-          <button className="w-full bg-slate-100">
+          <button className="w-full cursor-pointer bg-slate-100">
             {page}/{totalPageCount}
           </button>
           <button
             onClick={handleNext}
-            className="border border-primary-200 px-4 py-1 hover:bg-primary-200"
+            className="border cursor-pointer border-primary-200 px-4 py-1 hover:bg-primary-200"
           >
             Next
           </button>

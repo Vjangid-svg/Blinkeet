@@ -70,7 +70,7 @@ const UploadCategoryModel = ({ close, fetchData }) => {
       <div className="bg-white max-w-4xl w-full p-4 rounded">
         <div className="flex items-center justify-between">
           <h1 className="font-semibold">Category</h1>
-          <button onClick={close} className="w-fit block ml-auto">
+          <button onClick={close} className=" cursor-pointer w-fit block ml-auto">
             <IoClose size={25} />
           </button>
         </div>
@@ -131,10 +131,10 @@ const UploadCategoryModel = ({ close, fetchData }) => {
                     ${
                       data.name && data.image
                         ? "bg-primary-200 hover:bg-primary-100"
-                        : "bg-gray-300 "
+                        : "bg-gray-300  "
                     }
                     py-2    
-                    font-semibold 
+                    font-semibold cursor-pointer
                     `}
           >
             Add Category

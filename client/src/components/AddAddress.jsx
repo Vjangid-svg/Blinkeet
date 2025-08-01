@@ -46,7 +46,7 @@ const {fetchAddress} = useGlobalContext();
             <div className='bg-white p-4 w-full max-w-lg mt-8 mx-auto rounded'>
                 <div className='flex justify-between items-center gap-4'>
                     <h2 className='font-semibold'>Add Address</h2>
-                    <button onClick={close} className='hover:text-red-500'  >
+                    <button onClick={close} className=' cursor-pointer hover:text-red-500'  >
                         <IoClose size={25} />
                     </button>
                 </div>
@@ -107,7 +107,7 @@ const {fetchAddress} = useGlobalContext();
                             {...register("mobile", { required: true })}
                         />
                     </div>
-                    <button type='submit' className='bg-primary-200 w-full  py-2 font-semibold mt-4 hover:bg-primary-100'>Submit</button>
+                    <button type='submit' className='bg-primary-200 w-full cursor-pointer  py-2 font-semibold mt-4 hover:bg-primary-100'>Submit</button>
                 </form>
             </div>
         </section>

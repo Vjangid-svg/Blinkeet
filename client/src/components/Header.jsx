@@ -156,7 +156,7 @@ const Header = () => {
 
                     </div>
                   ) : (
-                    <p>My Cart</p>
+                    <p>Add items</p>
                   )}
                 </div>
               </button>

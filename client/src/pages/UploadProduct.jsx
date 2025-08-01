@@ -446,7 +446,7 @@ const UploadProduct = () => {
           >
             Add Fields
           </div>
-          <button className="bg-primary-100 hover:bg-primary-200 py-2 rounded font-semibold">
+          <button className="bg-primary-100 cursor-pointer hover:bg-primary-200 py-2 rounded font-semibold">
             Submit
           </button>
         </form>

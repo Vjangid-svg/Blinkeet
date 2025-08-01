@@ -7,7 +7,7 @@ const UserMenuMobile = () => {
     <section className="bg-white h-full w-full py-2">
       <button
         onClick={() => window.history.back()}
-        className="text-neutral-800 block w-fit ml-auto"
+        className="text-neutral-800 cursor-pointer block w-fit ml-auto"
       >
         <IoClose size={25} />
       </button>

@@ -99,13 +99,13 @@ const ProductDisplayPage = () => {
           <div className="w-full -ml-3 h-full hidden lg:flex justify-between absolute  items-center">
             <button
               onClick={handleScrollLeft}
-              className="z-10 bg-white relative p-1 rounded-full shadow-lg"
+              className="z-10 bg-white cursor-pointer relative p-1 rounded-full shadow-lg"
             >
               <FaAngleLeft />
             </button>
             <button
               onClick={handleScrollRight}
-              className="z-10 bg-white relative p-1 rounded-full shadow-lg"
+              className="z-10 bg-white cursor-pointer relative p-1 rounded-full shadow-lg"
             >
               <FaAngleRight />
             </button>

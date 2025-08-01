@@ -85,7 +85,7 @@ const ForgotPassword = () => {
           Already have account?{" "}
           <Link
             to={"/login"}
-            className="font-semibold transition-all duration-300 text-primary-200 hover:text-green-800"
+            className="font-semibold cursor-pointer transition-all duration-300 text-primary-200 hover:text-green-800"
           >
             Login
           </Link>

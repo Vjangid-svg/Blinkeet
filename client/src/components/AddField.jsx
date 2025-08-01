@@ -7,7 +7,7 @@ const AddField = ({ close, value, onChange, submit }) => {
       <div className="bg-white rounded p-4 w-full max-w-md">
         <div className="flex items-center justify-between gap-3">
           <h1 className="font-semibold">Add Field</h1>
-          <button onClick={close}>
+          <button className="cursor-pointer" onClick={close}>
             <IoClose size={25} />
           </button>
         </div>
@@ -19,7 +19,7 @@ const AddField = ({ close, value, onChange, submit }) => {
         />
         <button
           onClick={submit}
-          className="bg-primary-200 hover:bg-primary-100 px-4 py-2 rounded mx-auto w-fit block"
+          className="bg-primary-200 cursor-pointer hover:bg-primary-100 px-4 py-2 rounded mx-auto w-fit block"
         >
           Add Field
         </button>

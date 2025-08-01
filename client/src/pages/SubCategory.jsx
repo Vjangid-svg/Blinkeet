@@ -95,13 +95,13 @@ const SubCategoryPage = () => {
               <button onClick={()=>{
                   setOpenEdit(true)
                   setEditData(row.original)
-              }} className='p-2 bg-green-100 rounded-full hover:text-green-600'>
+            }} className='p-2 cursor-pointer bg-green-100 rounded-full hover:text-green-600'>
                   <HiPencil size={20}/>
               </button>
               <button onClick={()=>{
                 setOpenDeleteConfirmBox(true)
                 setDeleteSubCategory(row.original)
-              }} className='p-2 bg-red-100 rounded-full text-red-500 hover:text-red-600'>
+            }} className='p-2 cursor-pointer bg-red-100 rounded-full text-red-500 hover:text-red-600'>
                   <MdDelete  size={20}/>
               </button>
           </div>
@@ -133,7 +133,7 @@ const SubCategoryPage = () => {
     <section className=''>
         <div className='p-2   bg-white shadow-md flex items-center justify-between'>
             <h2 className='font-semibold'>Sub Category</h2>
-            <button onClick={()=>setOpenAddSubCategory(true)} className='text-sm border border-primary-200 hover:bg-primary-200 px-3 py-1 rounded'>Add Sub Category</button>
+        <button onClick={() => setOpenAddSubCategory(true)} className='text-sm border cursor-pointer border-primary-200 hover:bg-primary-200 px-3 py-1 rounded'>Add Sub Category</button>
         </div>
 
         <div className='overflow-auto w-full max-w-[95vw]'>

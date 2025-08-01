@@ -59,7 +59,6 @@ const CardProduct = ({ data }) => {
             <p className="text-red-500 text-sm text-center">Out of stock</p>
           )
             : (
-             
               <AddToCartButton data={data} />
             )
           }

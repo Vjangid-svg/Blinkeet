@@ -39,7 +39,7 @@ const handleOnChange  =(e)=>{
             <FaArrowLeft size={20} />
           </Link>
         ) : (
-          <button className="flex justify-center items-center h-full p-3 group-focus-within:text-primary-200">
+            <button className="flex justify-center cursor-pointer items-center h-full p-3 group-focus-within:text-primary-200">
             <IoSearch size={22} />
           </button>
         )}

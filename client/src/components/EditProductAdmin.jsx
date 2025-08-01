@@ -149,7 +149,7 @@ const EditProductAdmin = ({ close, data: propsData, fetchProductData }) => {
           <section className="">
             <div className="p-2   bg-white shadow-md flex items-center justify-between">
               <h2 F="font-semibold">Upload Product</h2>
-              <button onClick={close}>
+              <button className="cursor-pointer" onClick={close}>
                 <IoClose size={20} />
               </button>
             </div>
@@ -434,7 +434,7 @@ const EditProductAdmin = ({ close, data: propsData, fetchProductData }) => {
                   Add Fields
                 </div>
 
-                <button className="bg-primary-100 hover:bg-primary-200 py-2 rounded font-semibold">
+                <button className="bg-primary-100 cursor-pointer hover:bg-primary-200 py-2 rounded font-semibold">
                   Update Product
                 </button>
               </form>
