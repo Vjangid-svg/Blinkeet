@@ -72,13 +72,15 @@ export const getProductController = async (request, response) => {
       limit = 10;
     }
 
-    const query = search
-      ? {
-          $text: {
-            $search: search,
-          },
-        }
-      : {};
+   const query = search
+     ? {
+         $or: [
+           { name: { $regex: search, $options: "i" } },
+           { description: { $regex: search, $options: "i" } },
+           { more_details: { $regex: search, $options: "i" } },
+         ],
+       }
+     : {};
 
     const skip = (page - 1) * limit;
 
@@ -280,22 +282,18 @@ export const searchProduct = async (request, response) => {
   try {
     let { search, page, limit } = request.body;
 
-    if (!page) {
-      page = 1;
-    }
-    if (!limit) {
-      limit = 10;
-    }
+    page = Number(page) || 1;
+    limit = Number(limit) || 10;
+
+    const skip = (page - 1) * limit;
 
     const query = search
       ? {
-          $text: {
-            $search: search,
-          },
+          $or: [
+            { name: { $regex: search, $options: "i" } },
+          ],
         }
       : {};
-
-    const skip = (page - 1) * limit;
 
     const [data, dataCount] = await Promise.all([
       ProductModel.find(query)
@@ -313,8 +311,8 @@ export const searchProduct = async (request, response) => {
       data: data,
       totalCount: dataCount,
       totalPage: Math.ceil(dataCount / limit),
-      page: page,
-      limit: limit,
+      page,
+      limit,
     });
   } catch (error) {
     return response.status(500).json({
@@ -324,3 +322,4 @@ export const searchProduct = async (request, response) => {
     });
   }
 };
+
