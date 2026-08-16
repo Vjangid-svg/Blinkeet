@@ -140,14 +140,12 @@ export async function loginController(request, response) {
       });
     }
 
-
-
     const accesstoken = await generatedAccessToken(user._id);
     const refreshtoken = await generatedRefreshToken(user._id);
 
-    const updateUser = await UserModel.findByIdAndUpdate(user._id,{
-      last_login_date:new Date()
-    })
+    const updateUser = await UserModel.findByIdAndUpdate(user._id, {
+      last_login_date: new Date(),
+    });
     const cookiesOption = {
       httpOnly: true,
       secure: true,
@@ -214,13 +212,12 @@ export async function uploadAvatar(request, response) {
     const upload = await uploadImageCloudinary(image);
 
     const updateUser = await UserModel.findByIdAndUpdate(userId, {
-      
       avatar: upload.url,
     });
 
     return response.json({
       message: " upload Profile",
-        error: false,
+      error: false,
       success: true,
       data: {
         _id: userId,
@@ -360,8 +357,10 @@ export async function verifyForgotPasswordOtp(request, response) {
     }
     // if otp is not expire or valid otp then
 
-const updateUser = await UserModel.findByIdAndUpdate(user?._id,{forgot_password_otp:"",
-  forgot_password_expiry:""})
+    const updateUser = await UserModel.findByIdAndUpdate(user?._id, {
+      forgot_password_otp: "",
+      forgot_password_expiry: "",
+    });
 
     return response.status(200).json({
       message: "Verification successfull",
@@ -446,8 +445,8 @@ export async function resetPassword(request, response) {
 export async function refreshToken(request, response) {
   try {
     const refreshToken =
-       request.cookies?.refreshToken ||
-  request.headers?.authorization?.split(" ")[1]; ///"Bearer token"
+      request.cookies?.refreshToken ||
+      request.headers?.authorization?.split(" ")[1]; ///"Bearer token"
 
     if (!refreshToken) {
       return response.status(401).json({
@@ -458,16 +457,19 @@ export async function refreshToken(request, response) {
     }
 
     // console.log("refreshtoken",refreshToken)
-   let verifyToken;
-try {
-  verifyToken = jwt.verify(refreshToken, process.env.SECRET_KEY_REFRESH_TOKEN);
-} catch (err) {
-  return response.status(403).json({
-    message: "Token expired or invalid",
-    error: true,
-    success: false,
-  });
-}
+    let verifyToken;
+    try {
+      verifyToken = jwt.verify(
+        refreshToken,
+        process.env.SECRET_KEY_REFRESH_TOKEN
+      );
+    } catch (err) {
+      return response.status(403).json({
+        message: "Token expired or invalid",
+        error: true,
+        success: false,
+      });
+    }
     console.log("verifyToken ", verifyToken);
     const userId = verifyToken._id;
 
@@ -500,13 +502,15 @@ try {
 
 export async function userDetails(request, response) {
   try {
-    const userId = request.userId
-    const user = await UserModel.findById(userId).select("-password -refresh_token")
+    const userId = request.userId;
+    const user = await UserModel.findById(userId).select(
+      "-password -refresh_token"
+    );
     return response.status(200).json({
       message: "user details",
       error: false,
       success: true,
-      data:user,
+      data: user,
     });
   } catch (error) {
     return response.status(500).json({

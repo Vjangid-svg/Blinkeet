@@ -10,7 +10,7 @@ return `
     <p>This otp is valid for 1 hour only. Enter this otp in the binkeyit website to proceed with resetting your password.</p>
     <br/>
     <p>Thanks</p>
-    <p>Binkeyit</p>
+    <p>Adiyogi</p>
   </div>
 `
 }
