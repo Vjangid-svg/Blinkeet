@@ -82,6 +82,7 @@ export const getProductController = async (request, response) => {
         }
       : {};
 
+
     const skip = (page - 1) * limit;
 
     const [data, totalCount] = await Promise.all([
@@ -289,7 +290,9 @@ export const searchProduct = async (request, response) => {
 
     const query = search
       ? {
-          $or: [{ name: { $regex: search, $options: "i" } }],
+          $or: [
+            { name: { $regex: search, $options: "i" } },
+          ],
         }
       : {};
 
@@ -320,3 +323,4 @@ export const searchProduct = async (request, response) => {
     });
   }
 };
+
