@@ -19,6 +19,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
+  "http://localhost:3000",
   "https://blinkeet-asp.vercel.app",
   "https://blinkeet-frontend.onrender.com",
   "https://blinkeet-frontend.onrender.com/",
@@ -28,7 +29,7 @@ const allowedOrigins = [
 app.use(
   cors({
     origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
+      if (!origin || allowedOrigins.includes(origin) || origin.includes("blinkeet") || origin.includes("localhost")) {
         callback(null, true);
       } else {
         callback(new Error("Not allowed by CORS"));
